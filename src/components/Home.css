@@ -1,0 +1,67 @@
+/* Home.css */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure the video covers the entire viewport */
+}
+
+.video-background {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to truly center the element */
+    width: 1903px; /* Set your desired width */
+    height: 967px; /* Set your desired height */
+    object-fit: cover; /* This will ensure the video covers the area, might crop some parts */
+    z-index: -100;
+}
+
+.logo {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper positioning */
+    margin: 0 auto 20px; /* Center the logo and add some space below it */
+}
+
+
+.container {
+    position: absolute;
+    top: 50%; /* Center the container vertically */
+    left: 40%; /* Shift the container slightly to the left from the center */
+    transform: translate(-50%, -50%); /* Adjust horizontal translation for further left positioning */
+    z-index: 1; /* Make sure content appears above the video */
+    color: white; /* Set text color to contrast with video */
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Add padding for readability */
+}
+
+.typing-effect {
+    white-space: nowrap; /* Ensures the text stays in a single line */
+    overflow: hidden; /* Hide the overflowed content */
+    border-right: .15em solid orange; /* The cursor */
+    animation: typing 1.5s steps(30, end) forwards, blink-caret .75s step-end infinite 1.5s, fadeOutCursor 0.5s ease-out 3s forwards; font-size: 2em; /* Adjust font size as needed */
+    color: white; /* Font color */
+    margin: 0;
+    padding: 5px;
+    max-width: 500%; /* Ensure this is enough to fit the entire text */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark grey background with 50% transparency */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: Adds rounded corners to the background */
+
+  }
+  
+  /* Typing keyframe */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 390% }
+  }
+  
+  /* Cursor blink keyframe */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  @keyframes fadeOutCursor {
+    to { border-color: transparent; }
+}
