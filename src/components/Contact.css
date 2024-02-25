@@ -5,8 +5,8 @@ html, body {
   width: 100%;
   height: 100%;
 }
+
 .contact-container {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
@@ -20,24 +20,23 @@ html, body {
     }
 
   h4{
-    font-weight: lighter;
-    font-size: large;
+      font-weight: lighter;
+      font-size: large;
   }
   
   
   .contact-image-container {
     flex: 1; /* Use a proportion value rather than a fixed number */
-    max-width: 35%; /* Control the width of the image container */
+    width: 180%; /* Control the width of the image container */
     height: 600px; /* Set a specific height for the container */
     display: flex; /* Enables flexbox properties */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    margin: 0 20px;
-    /* Remove padding if it's creating a transparent border effect */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    margin: 0 -330px;
     overflow: hidden; /* Prevents the image from overflowing */
     background: none; /* Remove any background styling that might be creating a box effect */
     border: none; /* Remove borders that might be visible */
+    
 }
 
 .contact-image {
@@ -45,14 +44,15 @@ html, body {
     max-height: 100%; /* Ensure the image doesn't exceed the container's height */
     border-radius: 20px; /* Rounded corners for the image */
 }
+
   .contact-form-container {
     flex: 1;
     max-width: 40%; /* Control the width of the form container */
-    margin: 0 20px;
+    margin: -600px 190px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
     background: #ffffff; /* White background for the form container */
     border-radius: 20px; /* Rounded corners for the form container */
-    padding: 30px; /* Internal spacing */
+    padding: 20px; /* Internal spacing */
   }
   
   .contact-form h2 {
@@ -115,7 +115,6 @@ html, body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Slight shadow on hover for depth */
   }
   
-  /* Use media queries for responsiveness */
   @media (max-width: 768px) {
     .contact-image-container,
     .contact-form-container {

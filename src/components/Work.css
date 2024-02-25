@@ -1,9 +1,65 @@
-/*Work CSS*/
-.work-container {
-    width: 100%; /* Ensures the div takes up the full width */
-    height: 100vh; /* Sets the height to fill the viewport */
-    background-image: url('./WorkPic.jpg'); /* Sets the background image */
-    background-size: cover; /* Ensures the image covers the entire div */
-    background-position: center; /* Centers the background image */
+.work-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
-  
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    position: absolute;
+    z-index: -1; /* Ensures the background image stays behind the content */
+}
+
+.work-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%; /* Match the height of the background container */
+}
+
+.image-container {
+    position: relative;
+    height: 700px; /* Adjust height as needed */
+    width: 500px; /* Adjust width as needed */
+    margin: 10px; /* Added to ensure no overlap */
+    z-index: 1; /* Ensures the image container is above the background image */
+}
+
+.work-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    transition: height 0.5s ease; /* Changed from height to avoid instant show/hide */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container:hover .overlay {
+    height: 100%; /* Ensure this smoothly reveals the overlay */
+}
+
+.image-container:hover .work-image {
+    transform: scale(1.1); /* Optional zoom effect */
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
